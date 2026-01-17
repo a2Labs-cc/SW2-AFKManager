@@ -1,0 +1,22 @@
+{
+  "afk.warn": "[yellow]You are AFK ({0}/{1}). Move or you will be punished.[default]",
+  "afk.warn.center": "<font color='yellow'>You are AFK ({0}/{1})<br/>Move or you will be punished.</font>",
+  "afk.punish.kick.broadcast": "{0} was kicked for being AFK.",
+  "afk.punish.kill.broadcast": "{0} was killed for being AFK.",
+  "afk.punish.spec.broadcast": "{0} was moved to SPEC for being AFK.",
+  "afk.punish.kick.reason": "Kicked for being AFK",
+
+  "spec.warn": "[yellow]You are in spectator ({0}/{1}). Join a team or you will be kicked.[default]",
+  "spec.warn.center": "<font color='yellow'>You are in spectator ({0}/{1})<br/>Join a team or you will be kicked.</font>",
+  "spec.kick.reason": "Kicked for staying in spectator too long",
+
+  "anticamp.warn": "[yellow]Stop camping ({0}/{1}). Move or you will be punished.[default]",
+  "anticamp.warn.center": "<font color='yellow'>Stop camping ({0}/{1})<br/>Move or you will be punished.</font>",
+  "anticamp.slay.self": "[red]You were slayed for camping![default]",
+  "anticamp.slap.self": "[red]You were slapped for camping![default]",
+  "anticamp.slap.self_damage": "[red]You were slapped for camping! (-{0} HP)[default]",
+
+  "bomb.transfer.broadcast": "Bomb transferred -> {0} because {1} is AFK.",
+  "bomb.transfer.receiver": "[yellow]You received the C4 because a teammate is AFK.[default]",
+  "bomb.transfer.afk": "[yellow]C4 transferred because you are AFK.[default]"
+}
