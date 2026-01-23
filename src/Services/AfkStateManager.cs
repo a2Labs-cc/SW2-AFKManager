@@ -33,7 +33,7 @@ public class AfkStateManager
       return;
     }
 
-    var players = _core.PlayerManager.GetAllPlayers();
+    var players = _core.PlayerManager.GetAlive();
     if (players == null)
       return;
 
@@ -132,7 +132,7 @@ public class AfkStateManager
 
   private void ResetStates(DateTime now)
   {
-    var players = _core.PlayerManager.GetAllPlayers();
+    var players = _core.PlayerManager.GetAlive();
     if (players == null)
       return;
 
