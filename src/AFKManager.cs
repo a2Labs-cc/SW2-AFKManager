@@ -15,7 +15,7 @@ using AFKManager.Helpers;
 
 namespace AFKManager;
 
-[PluginMetadata(Id = "AFKManager", Version = "1.0.0", Name = "AFKManager", Author = "aga", Description = "No description.")]
+[PluginMetadata(Id = "AFKManager", Version = "1.0.1", Name = "AFKManager", Author = "aga", Description = "No description.")]
 public partial class AFKManager : BasePlugin
 {
   private static int _nextInstanceId;
