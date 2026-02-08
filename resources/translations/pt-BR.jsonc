@@ -1,0 +1,22 @@
+{
+  "afk.warn": "[green]Você está AFK [darkred]({0}/{1})[green]. Mova-se ou será punido.[default]",
+  "afk.warn.center": "<font color='green'>Você está AFK ({0}/{1})<br/>Mova-se ou será punido.</font>",
+  "afk.punish.kick.broadcast": "[darkred]{0} [green]foi kickado por estar AFK.",
+  "afk.punish.kill.broadcast": "[darkred]{0} [green]foi morto por estar AFK.",
+  "afk.punish.spec.broadcast": "[darkred]{0} [green]foi movido para SPEC por estar AFK.",
+  "afk.punish.kick.reason": "kickado por estar AFK",
+
+  "spec.warn": "[green]Você foi movido para SPEC ({0}/{1}). Entre em um time ou será kickado.[default]",
+  "spec.warn.center": "<font color='green'>Você foi movido para SPEC ({0}/{1})<br/>Entre em um time ou será kickado.</font>",
+  "spec.kick.reason": "kickado por ficar AFK",
+
+  "anticamp.warn": "[green]Pare de camperar ({0}/{1}). Mova-se ou será punido.[default]",
+  "anticamp.warn.center": "<font color='green'>Pare de camperar ({0}/{1})<br/>Mova-se ou será punido.</font>",
+  "anticamp.slay.self": "[darkred]Você foi morto por camperar![default]",
+  "anticamp.slap.self": "[darkred]Você levou um tapa por camperar![default]",
+  "anticamp.slap.self_damage": "[green]Você levou um tapa por camperar! [darkred](-{0} HP)[default]",
+
+  "bomb.transfer.broadcast": "C4 transferida -> {0} porque {1} está AFK.",
+  "bomb.transfer.receiver": "[green]Você recebeu a C4 porque um companheiro de equipe está AFK.[default]",
+  "bomb.transfer.afk": "[green]C4 transferida porque você está AFK.[default]"
+}
