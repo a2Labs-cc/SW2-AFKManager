@@ -101,7 +101,7 @@ public class SpectatorStateManager
       state.Warnings++;
 
       EmitWarningSound(player, config);
-      PlayerHelper.SendChatPrefixed(player, config, _core.Translation.GetPlayerLocalizer(player)["spec.warn", state.Warnings, config.SpecKickAfterWarnings]);
+      PlayerHelper.SendChatPrefixed(_core, player, _core.Translation.GetPlayerLocalizer(player)["spec.warn", state.Warnings, config.SpecKickAfterWarnings]);
       PlayerHelper.SendCenterHtml(_core, player, config, _core.Translation.GetPlayerLocalizer(player)["spec.warn.center", state.Warnings, config.SpecKickAfterWarnings]);
 
       if (state.Warnings < config.SpecKickAfterWarnings)

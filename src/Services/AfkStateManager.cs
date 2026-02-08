@@ -110,7 +110,7 @@ public class AfkStateManager
       }
 
       EmitWarningSound(player, config);
-      PlayerHelper.SendChatPrefixed(player, config, _core.Translation.GetPlayerLocalizer(player)["afk.warn", state.Warnings, config.AfkPunishAfterWarnings]);
+      PlayerHelper.SendChatPrefixed(_core, player, _core.Translation.GetPlayerLocalizer(player)["afk.warn", state.Warnings, config.AfkPunishAfterWarnings]);
       PlayerHelper.SendCenterHtml(_core, player, config, _core.Translation.GetPlayerLocalizer(player)["afk.warn.center", state.Warnings, config.AfkPunishAfterWarnings]);
 
       if (state.Warnings < config.AfkPunishAfterWarnings)
@@ -243,10 +243,10 @@ public class AfkStateManager
 
       var afkName = PlayerHelper.GetPlayerName(afk);
       var recvName = PlayerHelper.GetPlayerName(recv);
-      PlayerHelper.BroadcastChatLocalized(_core, config, "bomb.transfer.broadcast", recvName, afkName);
+      PlayerHelper.BroadcastChatLocalized(_core, "bomb.transfer.broadcast", recvName, afkName);
 
-      PlayerHelper.SendChatPrefixed(recv, config, _core.Translation.GetPlayerLocalizer(recv)["bomb.transfer.receiver"]);
-      PlayerHelper.SendChatPrefixed(afk, config, _core.Translation.GetPlayerLocalizer(afk)["bomb.transfer.afk"]);
+      PlayerHelper.SendChatPrefixed(_core, recv, _core.Translation.GetPlayerLocalizer(recv)["bomb.transfer.receiver"]);
+      PlayerHelper.SendChatPrefixed(_core, afk, _core.Translation.GetPlayerLocalizer(afk)["bomb.transfer.afk"]);
     });
     }
     catch

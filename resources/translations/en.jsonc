@@ -1,4 +1,5 @@
 {
+  "chat.prefix": "[red]AFKManager | [default]",
   "afk.warn": "[green]You are AFK ({0}/{1}). Move or you will be punished.[default]",
   "afk.warn.center": "<font color='green'>You are AFK ({0}/{1})<br/>Move or you will be punished.</font>",
   "afk.punish.kick.broadcast": "{0} was kicked for being AFK.",

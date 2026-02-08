@@ -15,7 +15,7 @@ using AFKManager.Helpers;
 
 namespace AFKManager;
 
-[PluginMetadata(Id = "AFKManager", Version = "1.0.2", Name = "AFKManager", Author = "aga", Description = "No description.")]
+[PluginMetadata(Id = "AFKManager", Version = "1.0.3", Name = "AFKManager", Author = "aga", Description = "No description.")]
 public partial class AFKManager : BasePlugin
 {
   private static int _nextInstanceId;
@@ -157,19 +157,19 @@ public partial class AFKManager : BasePlugin
       var playerName = PlayerHelper.GetPlayerName(p);
       if (action == "kick")
       {
-        PlayerHelper.BroadcastChatLocalized(Core, cfg, "afk.punish.kick.broadcast", playerName);
+        PlayerHelper.BroadcastChatLocalized(Core, "afk.punish.kick.broadcast", playerName);
         p.Kick(Core.Localizer["afk.punish.kick.reason"], default(ENetworkDisconnectionReason));
         return;
       }
 
       if (action == "kill")
       {
-        PlayerHelper.BroadcastChatLocalized(Core, cfg, "afk.punish.kill.broadcast", playerName);
+        PlayerHelper.BroadcastChatLocalized(Core, "afk.punish.kill.broadcast", playerName);
         p.Pawn?.CommitSuicide(false, true);
         return;
       }
 
-      PlayerHelper.BroadcastChatLocalized(Core, cfg, "afk.punish.spec.broadcast", playerName);
+      PlayerHelper.BroadcastChatLocalized(Core, "afk.punish.spec.broadcast", playerName);
       p.ChangeTeam(Team.Spectator);
       _spectatorStateManager?.MarkMovedToSpec(steamId);
     });

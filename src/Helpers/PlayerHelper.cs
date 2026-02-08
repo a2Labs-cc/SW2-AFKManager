@@ -70,33 +70,28 @@ public static class PlayerHelper
     });
   }
 
-  public static string ApplyPrefix(Config config, string message)
+  public static string ApplyPrefix(ISwiftlyCore core, string message)
   {
-    var prefix = config.ChatPrefix ?? string.Empty;
-    var prefixColor = config.ChatPrefixColor ?? string.Empty;
+    var prefix = core.Localizer["chat.prefix"] ?? string.Empty;
     if (string.IsNullOrWhiteSpace(prefix))
       return message;
-
-    if (!string.IsNullOrWhiteSpace(prefixColor))
-      return $"[{prefixColor.Trim().ToLowerInvariant()}]{prefix} [default]{message}";
-
-    return $"{prefix} {message}";
+    return $"{prefix}{message}";
   }
 
-  public static void SendChatPrefixed(IPlayer player, Config config, string message)
+  public static void SendChatPrefixed(ISwiftlyCore core, IPlayer player, string message)
   {
-    player.SendChat(ApplyPrefix(config, message));
+    player.SendChat(ApplyPrefix(core, message));
   }
 
-  public static void BroadcastChatPrefixed(ISwiftlyCore core, Config config, string message)
+  public static void BroadcastChatPrefixed(ISwiftlyCore core, string message)
   {
-    BroadcastChat(core, ApplyPrefix(config, message));
+    BroadcastChat(core, ApplyPrefix(core, message));
   }
 
-  public static void BroadcastChatLocalized(ISwiftlyCore core, Config config, string key, params object[] args)
+  public static void BroadcastChatLocalized(ISwiftlyCore core, string key, params object[] args)
   {
     var message = core.Localizer[key, args];
-    BroadcastChatPrefixed(core, config, message);
+    BroadcastChatPrefixed(core, message);
   }
 
   public static bool ShouldWarn(DateTime lastWarn, DateTime lastActivity, TimeSpan interval, DateTime now)

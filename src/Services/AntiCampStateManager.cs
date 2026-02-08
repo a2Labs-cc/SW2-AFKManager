@@ -132,7 +132,7 @@ public class AntiCampStateManager
       state.Warnings++;
 
       EmitWarningSound(player, config);
-      PlayerHelper.SendChatPrefixed(player, config, _core.Translation.GetPlayerLocalizer(player)["anticamp.warn", state.Warnings, config.AntiCampPunishAfterWarnings]);
+      PlayerHelper.SendChatPrefixed(_core, player, _core.Translation.GetPlayerLocalizer(player)["anticamp.warn", state.Warnings, config.AntiCampPunishAfterWarnings]);
       PlayerHelper.SendCenterHtml(_core, player, config, _core.Translation.GetPlayerLocalizer(player)["anticamp.warn.center", state.Warnings, config.AntiCampPunishAfterWarnings]);
 
       if (state.Warnings < config.AntiCampPunishAfterWarnings)
@@ -185,7 +185,7 @@ public class AntiCampStateManager
         if (pawn.Health <= 0)
         {
           pawn.CommitSuicide(true, true);
-          PlayerHelper.SendChatPrefixed(player, config, _core.Translation.GetPlayerLocalizer(player)["anticamp.slay.self"]);
+          PlayerHelper.SendChatPrefixed(_core, player, _core.Translation.GetPlayerLocalizer(player)["anticamp.slay.self"]);
           return;
         }
       }
@@ -208,9 +208,9 @@ public class AntiCampStateManager
       player.Teleport(origin.Value, rotation.Value, newVel);
       
       if (damage > 0)
-        PlayerHelper.SendChatPrefixed(player, config, _core.Translation.GetPlayerLocalizer(player)["anticamp.slap.self_damage", damage]);
+        PlayerHelper.SendChatPrefixed(_core, player, _core.Translation.GetPlayerLocalizer(player)["anticamp.slap.self_damage", damage]);
       else
-        PlayerHelper.SendChatPrefixed(player, config, _core.Translation.GetPlayerLocalizer(player)["anticamp.slap.self"]);
+        PlayerHelper.SendChatPrefixed(_core, player, _core.Translation.GetPlayerLocalizer(player)["anticamp.slap.self"]);
     }
     catch (Exception ex)
     {

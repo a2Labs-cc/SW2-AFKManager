@@ -5,8 +5,6 @@ namespace AFKManager;
 
 public class Config
 {
-  public string ChatPrefix { get; set; } = "AFKManager |";
-  public string ChatPrefixColor { get; set; } = "Red";
   public bool CenterHtmlAlerts { get; set; } = false;
   public int AfkPunishAfterWarnings { get; set; } = 3;
   public string AfkPunishment { get; set; } = "spectator";
