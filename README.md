@@ -29,7 +29,7 @@
 - Players camping within a radius
 - Players staying in spectator too long
 
-It also supports optional C4 transfer from AFK players, localized messages, chat prefix + color, and optional center HTML warnings.
+It also supports optional C4 transfer from AFK players, localized messages including chat prefix, and optional center HTML warnings.
 
 ## Support
 
@@ -81,8 +81,6 @@ On first run the config is created automatically. The resolved path is logged on
 - `Timer`: How often the plugin checks players (seconds)
 - `SkipWarmup`: Skip checks during warmup
 - `WarningSound`: Sound emitted on warnings
-
-- `ChatPrefix` / `ChatPrefixColor`: Prefix applied to chat messages
 - `CenterHtmlAlerts`: Show center HTML warning messages (auto clears when player becomes active)
 
 - `AfkWarnInterval` / `AfkPunishAfterWarnings` / `AfkPunishment`: AFK detection + punishment
@@ -92,6 +90,7 @@ On first run the config is created automatically. The resolved path is logged on
 - `SpecWarnInterval` / `SpecKickAfterWarnings` / `SpecKickMinPlayers` / `SpecKickOnlyMovedByPlugin`: Spectator handling
 - `SpecSkipFlag`: Permissions to skip spectator checks
 
+- `AntiCampEnabled`: Completely disable anti-camp functionality
 - `AntiCampRadius` / `AntiCampWarnInterval` / `AntiCampPunishAfterWarnings`: Camping detection
 - `AntiCampPunishment` / `AntiCampSlapDamage`: Punishment configuration
 - `AntiCampSkipBombPlanted` / `AntiCampSkipTeam` / `AntiCampSkipFlag`: Skip rules
