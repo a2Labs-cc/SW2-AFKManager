@@ -22,6 +22,7 @@ public class Config
   public List<string> AntiCampSkipFlag { get; set; } = new() { "admin.root", "admin.ban" };
   public string WarningSound { get; set; } = "UIPanorama.ui_custom_lobby_dialog_slide";
   public bool SkipWarmup { get; set; } = true;
+  public bool AntiCampEnabled { get; set; } = true;
   public float AntiCampRadius { get; set; } = 130.0f;
   public string AntiCampPunishment { get; set; } = "slap";
   public int AntiCampSlapDamage { get; set; } = 0;

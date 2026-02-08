@@ -30,6 +30,12 @@ public class AntiCampStateManager
 
   public void CheckAntiCamp(Config config, DateTime now, bool bombPlanted, Func<ulong, bool> hasAfkWarnings)
   {
+    if (!config.AntiCampEnabled)
+    {
+      _antiCampStates.Clear();
+      return;
+    }
+
     if (config.AntiCampPunishAfterWarnings <= 0)
     {
       _antiCampStates.Clear();
