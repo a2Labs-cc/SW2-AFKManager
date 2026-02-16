@@ -15,7 +15,7 @@ using AFKManager.Helpers;
 
 namespace AFKManager;
 
-[PluginMetadata(Id = "AFKManager", Version = "1.0.3", Name = "AFKManager", Author = "aga", Description = "No description.")]
+[PluginMetadata(Id = "AFKManager", Version = "1.0.4", Name = "AFKManager", Author = "aga", Description = "No description.")]
 public partial class AFKManager : BasePlugin
 {
   private static int _nextInstanceId;
@@ -69,6 +69,8 @@ public partial class AFKManager : BasePlugin
     _afkStateManager = new AfkStateManager(Core);
     _antiCampStateManager = new AntiCampStateManager(Core);
     _spectatorStateManager = new SpectatorStateManager(Core);
+
+    DisableGameAutoKick();
 
     _config.OnChange(OnConfigurationChanged);
 
@@ -130,10 +132,25 @@ public partial class AFKManager : BasePlugin
       StartAfkTimer();
   }
 
+  private void DisableGameAutoKick()
+  {
+    try
+    {
+      var autoKick = Core.ConVar.FindAsString("mp_autokick");
+      if (autoKick != null)
+        autoKick.SetInternalAsString("0");
+    }
+    catch
+    {
+    }
+  }
+
   private void CheckAfk()
   {
     if (_config == null || _afkStateManager == null || _antiCampStateManager == null || _spectatorStateManager == null)
       return;
+
+    DisableGameAutoKick();
 
     var cfg = _config.CurrentValue;
     var now = DateTime.UtcNow;
