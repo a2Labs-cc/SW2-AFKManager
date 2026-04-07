@@ -11,8 +11,8 @@
   "spec.warn.center": "<font color='green'>Tu spectatorej ({0}/{1})<br/>Prisijunk prie komandos arba būsi išmestas.</font>",
   "spec.kick.reason": "Išmestas, nes per ilgai sėdėjo spectatorej",
 
-  "anticamp.warn": "[green]Nustok sėdėti vietoje ({0}/{1}). Pajudėk arba permestas į SPEC.[default]",
-  "anticamp.warn.center": "<font color='green'>Nustok sėdėti vietoje ({0}/{1})<br/>Pajudėk arba permestas į SPEC.</font>",
+  "anticamp.warn": "[green]Nustok sėdėti vietoje ({0}/{1}). Pajudėk arba būsi permestas į SPEC.[default]",
+  "anticamp.warn.center": "<font color='green'>Nustok sėdėti vietoje ({0}/{1})<br/>Pajudėk arba būsi permestas į SPEC.</font>",
   "anticamp.slay.self": "[darkred]Buvai nunaikintas už per ilgą sėdėjimą vietoje![default]",
   "anticamp.slap.self": "[darkred]Gavai pliauską už per ilgą sėdėjimą vietoje![default]",
   "anticamp.slap.self_damage": "[darkred]Gavai pliauską už per ilgą sėdėjimą vietoje! (-{0} HP)[default]",
