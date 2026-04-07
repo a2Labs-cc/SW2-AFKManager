@@ -1,0 +1,23 @@
+{
+  "chat.prefix": "[red]AFKManager | [default]",
+  "afk.warn": "[green]Tu AFK ({0}/{1}). Pajudėk arba permestas į SPEC.[default]",
+  "afk.warn.center": "<font color='green'>Tu AFK ({0}/{1})<br/>Pajudėk arba permestas į SPEC.</font>",
+  "afk.punish.kick.broadcast": "{0} buvo išmestas už AFK.",
+  "afk.punish.kill.broadcast": "{0} buvo nunaikintas už AFK.",
+  "afk.punish.spec.broadcast": "{0} buvo perkeltas į SPEC už AFK.",
+  "afk.punish.kick.reason": "Išmestas už AFK",
+
+  "spec.warn": "[green]Tu spectatorej ({0}/{1}). Prisijunk prie komandos arba būsi išmestas.[default]",
+  "spec.warn.center": "<font color='green'>Tu spectatorej ({0}/{1})<br/>Prisijunk prie komandos arba būsi išmestas.</font>",
+  "spec.kick.reason": "Išmestas, nes per ilgai sėdėjo spectatorej",
+
+  "anticamp.warn": "[green]Nustok sėdėti vietoje ({0}/{1}). Pajudėk arba permestas į SPEC.[default]",
+  "anticamp.warn.center": "<font color='green'>Nustok sėdėti vietoje ({0}/{1})<br/>Pajudėk arba permestas į SPEC.</font>",
+  "anticamp.slay.self": "[darkred]Buvai nunaikintas už per ilgą sėdėjimą vietoje![default]",
+  "anticamp.slap.self": "[darkred]Gavai pliauską už per ilgą sėdėjimą vietoje![default]",
+  "anticamp.slap.self_damage": "[darkred]Gavai pliauską už per ilgą sėdėjimą vietoje! (-{0} HP)[default]",
+
+  "bomb.transfer.broadcast": "Bomba perduota -> {0}, nes {1} yra AFK.",
+  "bomb.transfer.receiver": "[green]Gavai C4, nes komandos draugas yra AFK.[default]",
+  "bomb.transfer.afk": "[green]C4 perduotas, nes tu AFK.[default]"
+}
